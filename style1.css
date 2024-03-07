@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Young+Serif&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+h1,
+h2,
+p{
+    cursor: default;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #7cabf1;
+}
+main{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 50%;
+    background: #232528;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.329);
+    animation: rotate 5.5s linear infinite;
+    overflow: hidden;
+}
+ .spin-cont {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    transform: rotate(90deg);
+    border-radius: 50%;
+    background: radial-gradient(#000,#0c0c0c,#2c2c2c);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 5.329);
+    animation: rotate 5.5s linear infinite;
+ }
+.spinner-bob {
+    width: 70px;
+    height: 70px;
+    background: #fb7000;
+    transform: rotate(360deg);
+    transform-origin: 150px;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    position: absolute;
+    animation: rotate 3.5s linear infinite;
+    list-style-type: none;
+    left: 0;
+    animation-delay: calc(2.6s * var(--i));
+}
+.spinner-bob:nth-child(2){
+    width: 60px;
+    height: 60px;
+    left: 20px;
+    transform-origin: 140px;
+    animation-duration: .0s;
+}
+.spinner-bob:nth-child(1){
+    width: 60px;
+    height: 60px;
+    left: 20px;
+    transform-origin: 140px;
+    animation-duration: .0s;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
